@@ -48,19 +48,21 @@ print(to_roman(699))
 
 # print(factorial(5))
 
+#Big O(n)
 def fibo(num, value1=0, value2=1):
     if num <= 1:
         return value2
     print(value1, value2)
     return fibo(num-1, value1= value2, value2 = value1+value2)
     
-print(fibo(81))
 
+
+# Big O(2^n)
 def fibo(num):
     if num <= 1:
         return num
     print((num - 1),(num -2), (num - 1)+(num -2))
     return fibo(num - 1) + fibo(num -2)
 
-print(fibo(81))
+
 
