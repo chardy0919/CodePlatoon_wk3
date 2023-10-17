@@ -19,11 +19,10 @@ def to_roman(num, answer= ""):
     }
     if num == 0:
         return answer
-    else:
-        for numeral, val in numerals.items():
-            if num >= val:
-                print(num, answer)
-                return to_roman(num=num%val, answer = answer + numeral*(num//val))
+    for numeral, val in numerals.items():
+        if num >= val:
+            print(num, answer)
+            return to_roman(num=num%val, answer = answer + numeral*(num//val))
 
 print(to_roman(699))
 
@@ -49,14 +48,13 @@ print(to_roman(699))
 
 # print(factorial(5))
 
-# def fibo(num, value1=0, value2=1):
-#     if num <= 1:
-#         return value2
-#     else:
-#         print(value1, value2)
-#         return fibo(num-1, value1= value2, value2 = value1+value2)
+def fibo(num, value1=0, value2=1):
+    if num <= 1:
+        return value2
+    print(value1, value2)
+    return fibo(num-1, value1= value2, value2 = value1+value2)
     
-# print(fibo(81))
+print(fibo(81))
 
 # def fibo(num):
 #     if num <= 1:
