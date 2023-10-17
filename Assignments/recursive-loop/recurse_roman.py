@@ -56,11 +56,11 @@ def fibo(num, value1=0, value2=1):
     
 print(fibo(81))
 
-# def fibo(num):
-#     if num <= 1:
-#         return num
-#     print((num - 1),(num -2), (num - 1)+(num -2))
-#     return fibo(num - 1) + fibo(num -2)
+def fibo(num):
+    if num <= 1:
+        return num
+    print((num - 1),(num -2), (num - 1)+(num -2))
+    return fibo(num - 1) + fibo(num -2)
 
-# print(fibo(81))
+print(fibo(81))
 
