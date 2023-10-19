@@ -15,7 +15,7 @@ class Fifo:
         self.base.append(item)
            
     def dequeue(self):
-        return self.base.pop()
+        return self.base.pop(0)
 
     def peek(self):
         if self.base:
@@ -24,3 +24,11 @@ class Fifo:
     
     def size(self):
         return len(self.base)
+    
+liner = Fifo()
+liner.enqueue(1)
+liner.enqueue(2)
+liner.enqueue(3)
+liner.enqueue(4)
+liner.enqueue(5)
+print(liner.dequeue())

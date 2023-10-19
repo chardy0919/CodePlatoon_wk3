@@ -19,8 +19,21 @@ class LinkedList:
         self.head = new_node
         self.head.next = old_node
 
-    def search(self, value):
-        pass
+    # def search(self, value_to_find):
+    #     current_node = self.head
+    #     while current_node:
+    #         if current_node.value == value_to_find:
+    #             return current_node
+    #         current_node = current_node.next
+    #     return None
+
+    def search(self, data):
+        current_node = self.head
+        while current_node:
+            if current_node.value == data:
+                return current_node
+            current_node = current_node.next
+        return None
 
 lister = LinkedList()
 lister.insert(1)
@@ -28,4 +41,4 @@ lister.insert(2)
 lister.insert(3)
 lister.insert(4)
 # lister.search(2)
-print(lister.head)
+print(lister.search(2))
